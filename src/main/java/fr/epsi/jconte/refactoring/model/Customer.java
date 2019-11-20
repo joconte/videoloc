@@ -9,6 +9,7 @@ public class Customer {
 
     public Customer(String name) {
         name_ = name;
+        rentals_ = new Vector();
     }
 
     public void addRentals(Rental arg) {
