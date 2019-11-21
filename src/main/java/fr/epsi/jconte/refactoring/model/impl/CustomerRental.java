@@ -3,12 +3,13 @@ package fr.epsi.jconte.refactoring.model.impl;
 import fr.epsi.jconte.refactoring.model.ICustomer;
 import fr.epsi.jconte.refactoring.model.ICustomerRental;
 import fr.epsi.jconte.refactoring.model.IRental;
-import fr.epsi.jconte.refactoring.model.MovieType;
 
 import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.List;
 
+/**
+ * The CustomerRental class represents the customer and all his rentals
+ */
 public class CustomerRental implements ICustomerRental {
 
     private ICustomer customer;

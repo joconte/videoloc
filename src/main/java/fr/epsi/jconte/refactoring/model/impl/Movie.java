@@ -3,6 +3,9 @@ package fr.epsi.jconte.refactoring.model.impl;
 import fr.epsi.jconte.refactoring.model.IMovie;
 import fr.epsi.jconte.refactoring.model.MovieType;
 
+/**
+ * The Movie class represents a movie in our store
+ */
 public class Movie implements IMovie {
     private MovieType movieType;
     private String title;

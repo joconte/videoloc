@@ -2,7 +2,9 @@ package fr.epsi.jconte.refactoring.model.impl;
 
 import fr.epsi.jconte.refactoring.model.ICustomer;
 
-// The Customer class represents the customer of the store.
+/**
+ * The customer class represent a customer in our store
+ */
 public class Customer implements ICustomer {
 
     private java.lang.String name_;
