@@ -1,7 +1,7 @@
-package fr.epsi.jconte.refactoring.service.impl;
+package fr.epsi.jconte.refactoring.calculator.impl;
 
+import fr.epsi.jconte.refactoring.calculator.ICalculatorRentalCostPriceRuleSamePriceEveryDay;
 import fr.epsi.jconte.refactoring.model.IRental;
-import fr.epsi.jconte.refactoring.service.ICalculatorRentalCostPriceRuleSamePriceEveryDay;
 
 public class CalculatorRentalCostPriceRuleSamePriceEveryDay implements ICalculatorRentalCostPriceRuleSamePriceEveryDay {
     @Override

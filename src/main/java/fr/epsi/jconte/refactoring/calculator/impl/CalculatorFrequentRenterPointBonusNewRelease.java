@@ -1,9 +1,9 @@
-package fr.epsi.jconte.refactoring.service.impl;
+package fr.epsi.jconte.refactoring.calculator.impl;
 
+import fr.epsi.jconte.refactoring.calculator.ICalculatorFrequentRenterPoint;
 import fr.epsi.jconte.refactoring.model.ICustomerRental;
 import fr.epsi.jconte.refactoring.model.IRental;
 import fr.epsi.jconte.refactoring.model.MovieType;
-import fr.epsi.jconte.refactoring.service.ICalculatorFrequentRenterPoint;
 
 /**
  * Provides methods to get the number of frequent renter points of a customer based on his rentals.

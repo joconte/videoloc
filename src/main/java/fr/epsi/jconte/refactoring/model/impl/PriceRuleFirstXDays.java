@@ -1,7 +1,8 @@
-package fr.epsi.jconte.refactoring.service.impl;
+package fr.epsi.jconte.refactoring.model.impl;
 
+import fr.epsi.jconte.refactoring.model.IPriceRuleFirstXDays;
 import fr.epsi.jconte.refactoring.model.MovieType;
-import fr.epsi.jconte.refactoring.service.IPriceRuleFirstXDays;
+import fr.epsi.jconte.refactoring.model.impl.PriceRule;
 
 public class PriceRuleFirstXDays extends PriceRule implements IPriceRuleFirstXDays {
 

@@ -1,8 +1,13 @@
 package fr.epsi.jconte.refactoring;
 
+import fr.epsi.jconte.refactoring.calculator.*;
+import fr.epsi.jconte.refactoring.calculator.impl.*;
 import fr.epsi.jconte.refactoring.exception.FunctionnalException;
 import fr.epsi.jconte.refactoring.model.*;
 import fr.epsi.jconte.refactoring.model.impl.*;
+import fr.epsi.jconte.refactoring.printer.IPrinter;
+import fr.epsi.jconte.refactoring.printer.impl.PrinterConsole;
+import fr.epsi.jconte.refactoring.printer.impl.PrinterHtml;
 import fr.epsi.jconte.refactoring.service.*;
 import fr.epsi.jconte.refactoring.service.impl.*;
 

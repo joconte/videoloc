@@ -1,8 +1,13 @@
-package fr.epsi.jconte.refactoring.service.impl;
+package fr.epsi.jconte.refactoring.calculator.impl;
 
+import fr.epsi.jconte.refactoring.calculator.ICalculatorRentalCost;
+import fr.epsi.jconte.refactoring.calculator.ICalculatorRentalCostPriceRuleFirstXDays;
+import fr.epsi.jconte.refactoring.calculator.ICalculatorRentalCostPriceRuleSamePriceEveryDay;
 import fr.epsi.jconte.refactoring.exception.FunctionnalException;
+import fr.epsi.jconte.refactoring.model.IPriceRule;
+import fr.epsi.jconte.refactoring.model.IPriceRuleFirstXDays;
+import fr.epsi.jconte.refactoring.model.IPriceRuleSamePriceEveryDay;
 import fr.epsi.jconte.refactoring.model.IRental;
-import fr.epsi.jconte.refactoring.service.*;
 
 import java.util.List;
 import java.util.stream.Collectors;

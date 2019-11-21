@@ -1,10 +1,10 @@
-package fr.epsi.jconte.refactoring.service.impl;
+package fr.epsi.jconte.refactoring.calculator.impl;
 
+import fr.epsi.jconte.refactoring.calculator.ICalculatorAmountOwed;
+import fr.epsi.jconte.refactoring.calculator.ICalculatorRentalCost;
 import fr.epsi.jconte.refactoring.exception.FunctionnalException;
 import fr.epsi.jconte.refactoring.model.ICustomerRental;
 import fr.epsi.jconte.refactoring.model.IRental;
-import fr.epsi.jconte.refactoring.service.ICalculatorAmountOwed;
-import fr.epsi.jconte.refactoring.service.ICalculatorRentalCost;
 
 /**
  * This class provide methods to calculate the owed amount by the customer to the store, no reduction possible

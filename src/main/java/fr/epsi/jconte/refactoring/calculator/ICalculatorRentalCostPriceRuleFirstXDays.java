@@ -1,5 +1,6 @@
-package fr.epsi.jconte.refactoring.service;
+package fr.epsi.jconte.refactoring.calculator;
 
+import fr.epsi.jconte.refactoring.model.IPriceRuleFirstXDays;
 import fr.epsi.jconte.refactoring.model.IRental;
 
 public interface ICalculatorRentalCostPriceRuleFirstXDays {

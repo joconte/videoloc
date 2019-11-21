@@ -1,7 +1,7 @@
-package fr.epsi.jconte.refactoring.service.impl;
+package fr.epsi.jconte.refactoring.calculator.impl;
 
+import fr.epsi.jconte.refactoring.calculator.ICalculatorFrequentRenterPoint;
 import fr.epsi.jconte.refactoring.model.ICustomerRental;
-import fr.epsi.jconte.refactoring.service.ICalculatorFrequentRenterPoint;
 
 public class CalculatorFrequentRenterPointNoPoint implements ICalculatorFrequentRenterPoint {
     @Override

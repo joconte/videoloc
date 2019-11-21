@@ -1,7 +1,7 @@
-package fr.epsi.jconte.refactoring.service.impl;
+package fr.epsi.jconte.refactoring.model.impl;
 
+import fr.epsi.jconte.refactoring.model.IPriceRule;
 import fr.epsi.jconte.refactoring.model.MovieType;
-import fr.epsi.jconte.refactoring.service.IPriceRule;
 
 public class PriceRule implements IPriceRule {
 

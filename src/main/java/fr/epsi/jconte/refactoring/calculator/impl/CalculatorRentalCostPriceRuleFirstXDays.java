@@ -1,8 +1,8 @@
-package fr.epsi.jconte.refactoring.service.impl;
+package fr.epsi.jconte.refactoring.calculator.impl;
 
+import fr.epsi.jconte.refactoring.calculator.ICalculatorRentalCostPriceRuleFirstXDays;
 import fr.epsi.jconte.refactoring.model.IRental;
-import fr.epsi.jconte.refactoring.service.ICalculatorRentalCostPriceRuleFirstXDays;
-import fr.epsi.jconte.refactoring.service.IPriceRuleFirstXDays;
+import fr.epsi.jconte.refactoring.model.IPriceRuleFirstXDays;
 
 public class CalculatorRentalCostPriceRuleFirstXDays implements ICalculatorRentalCostPriceRuleFirstXDays {
 

@@ -1,11 +1,11 @@
-package fr.epsi.jconte.refactoring.service.impl;
+package fr.epsi.jconte.refactoring.printer.impl;
 
 import fr.epsi.jconte.refactoring.exception.FunctionnalException;
 import fr.epsi.jconte.refactoring.model.ICustomerRental;
-import fr.epsi.jconte.refactoring.service.ICalculatorAmountOwed;
-import fr.epsi.jconte.refactoring.service.ICalculatorFrequentRenterPoint;
-import fr.epsi.jconte.refactoring.service.ICalculatorRentalCost;
-import fr.epsi.jconte.refactoring.service.IPrinter;
+import fr.epsi.jconte.refactoring.calculator.ICalculatorAmountOwed;
+import fr.epsi.jconte.refactoring.calculator.ICalculatorFrequentRenterPoint;
+import fr.epsi.jconte.refactoring.calculator.ICalculatorRentalCost;
+import fr.epsi.jconte.refactoring.printer.IPrinter;
 
 public abstract class Printer implements IPrinter {
 

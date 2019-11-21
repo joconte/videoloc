@@ -1,4 +1,4 @@
-package fr.epsi.jconte.refactoring.service;
+package fr.epsi.jconte.refactoring.model;
 
 public interface IPriceRuleFirstXDays {
 

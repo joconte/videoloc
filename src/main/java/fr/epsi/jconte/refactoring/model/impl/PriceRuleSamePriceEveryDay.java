@@ -1,7 +1,7 @@
-package fr.epsi.jconte.refactoring.service.impl;
+package fr.epsi.jconte.refactoring.model.impl;
 
+import fr.epsi.jconte.refactoring.model.IPriceRuleSamePriceEveryDay;
 import fr.epsi.jconte.refactoring.model.MovieType;
-import fr.epsi.jconte.refactoring.service.IPriceRuleSamePriceEveryDay;
 
 public class PriceRuleSamePriceEveryDay extends PriceRule implements IPriceRuleSamePriceEveryDay {
 

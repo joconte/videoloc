@@ -1,11 +1,7 @@
-package fr.epsi.jconte.refactoring.service.impl;
+package fr.epsi.jconte.refactoring.printer.impl;
 
 import fr.epsi.jconte.refactoring.exception.FunctionnalException;
 import fr.epsi.jconte.refactoring.model.*;
-import fr.epsi.jconte.refactoring.service.ICalculatorAmountOwed;
-import fr.epsi.jconte.refactoring.service.ICalculatorFrequentRenterPoint;
-import fr.epsi.jconte.refactoring.service.ICalculatorRentalCost;
-import fr.epsi.jconte.refactoring.service.IPrinter;
 
 import java.util.List;
 
