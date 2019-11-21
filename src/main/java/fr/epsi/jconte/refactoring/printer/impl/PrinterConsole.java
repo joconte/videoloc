@@ -1,5 +1,8 @@
 package fr.epsi.jconte.refactoring.printer.impl;
 
+import fr.epsi.jconte.refactoring.calculator.ICalculatorAmountOwed;
+import fr.epsi.jconte.refactoring.calculator.ICalculatorFrequentRenterPoint;
+import fr.epsi.jconte.refactoring.calculator.ICalculatorRentalCost;
 import fr.epsi.jconte.refactoring.exception.FunctionnalException;
 import fr.epsi.jconte.refactoring.model.ICustomer;
 import fr.epsi.jconte.refactoring.model.ICustomerRental;
@@ -38,5 +41,11 @@ public class PrinterConsole extends Printer{
                 + String.valueOf(calculatorFrequentRenterPoint.getFrequentRenterPoint(customerRental))
                 + " frequent renter points ";
         System.out.println(result);
+    }
+
+    public PrinterConsole() {}
+
+    public PrinterConsole(ICalculatorAmountOwed calculatorAmountOwed, ICalculatorFrequentRenterPoint calculatorFrequentRenterPoint, ICalculatorRentalCost calculatorRentalCost) {
+        super(calculatorAmountOwed, calculatorFrequentRenterPoint, calculatorRentalCost);
     }
 }

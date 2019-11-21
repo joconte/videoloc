@@ -9,13 +9,19 @@ import fr.epsi.jconte.refactoring.printer.IPrinter;
 
 public abstract class Printer implements IPrinter {
 
-    protected ICustomerRental customerRental;
-
     protected ICalculatorAmountOwed calculatorAmountOwed;
 
     protected ICalculatorFrequentRenterPoint calculatorFrequentRenterPoint;
 
     protected ICalculatorRentalCost calculatorRentalCost;
+
+    public Printer(){}
+
+    public Printer(ICalculatorAmountOwed calculatorAmountOwed, ICalculatorFrequentRenterPoint calculatorFrequentRenterPoint, ICalculatorRentalCost calculatorRentalCost) {
+        this.calculatorAmountOwed = calculatorAmountOwed;
+        this.calculatorFrequentRenterPoint = calculatorFrequentRenterPoint;
+        this.calculatorRentalCost = calculatorRentalCost;
+    }
 
     @Override
     public void printCustomerRental(ICustomerRental customerRental) throws FunctionnalException {

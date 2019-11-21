@@ -17,6 +17,8 @@ public class CalculatorAmountOwedNoReduc implements ICalculatorAmountOwed {
         this.calculatorRentalCost = calculatorRentalCost;
     }
 
+    public CalculatorAmountOwedNoReduc() {}
+
     @Override
     public double getAmountOwed(ICustomerRental customerRental) throws FunctionnalException {
         double sum = 0;

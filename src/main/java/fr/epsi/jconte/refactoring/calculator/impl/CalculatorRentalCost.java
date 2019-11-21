@@ -26,6 +26,8 @@ public class CalculatorRentalCost implements ICalculatorRentalCost {
         this.calculatorRentalCostPriceRuleSamePriceEveryDay = calculatorRentalCostPriceRuleSamePriceEveryDay;
     }
 
+    public CalculatorRentalCost() {}
+
     @Override
     public double calculateRentalCost(IRental rental) throws FunctionnalException {
 
@@ -33,7 +35,7 @@ public class CalculatorRentalCost implements ICalculatorRentalCost {
 
         double rentalCost = 0;
         if (priceRule instanceof IPriceRuleSamePriceEveryDay) {
-            rentalCost = calculatorRentalCostPriceRuleSamePriceEveryDay.getRentalCost(rental);
+            rentalCost = calculatorRentalCostPriceRuleSamePriceEveryDay.getRentalCost(rental, (IPriceRuleSamePriceEveryDay) priceRule);
         } else if (priceRule instanceof IPriceRuleFirstXDays) {
             rentalCost = calculatorRentalCostPriceRuleFirstXDays.getRentalCost(rental, (IPriceRuleFirstXDays) priceRule);
         }

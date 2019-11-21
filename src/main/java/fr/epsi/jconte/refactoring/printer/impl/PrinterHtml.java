@@ -1,5 +1,8 @@
 package fr.epsi.jconte.refactoring.printer.impl;
 
+import fr.epsi.jconte.refactoring.calculator.ICalculatorAmountOwed;
+import fr.epsi.jconte.refactoring.calculator.ICalculatorFrequentRenterPoint;
+import fr.epsi.jconte.refactoring.calculator.ICalculatorRentalCost;
 import fr.epsi.jconte.refactoring.exception.FunctionnalException;
 import fr.epsi.jconte.refactoring.model.*;
 
@@ -55,5 +58,11 @@ public class PrinterHtml extends Printer{
 
         result += htmlLastBalise;
         System.out.println(result);
+    }
+
+    public PrinterHtml() {}
+
+    public PrinterHtml(ICalculatorAmountOwed calculatorAmountOwed, ICalculatorFrequentRenterPoint calculatorFrequentRenterPoint, ICalculatorRentalCost calculatorRentalCost) {
+        super(calculatorAmountOwed, calculatorFrequentRenterPoint, calculatorRentalCost);
     }
 }

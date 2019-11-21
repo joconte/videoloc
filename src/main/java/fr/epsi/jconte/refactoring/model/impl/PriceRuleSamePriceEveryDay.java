@@ -11,4 +11,9 @@ public class PriceRuleSamePriceEveryDay extends PriceRule implements IPriceRuleS
         super(movieType);
         this.price = price;
     }
+
+    @Override
+    public double getPrice() {
+        return this.price;
+    }
 }
