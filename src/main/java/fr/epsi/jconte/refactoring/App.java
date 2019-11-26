@@ -14,14 +14,10 @@ import fr.epsi.jconte.refactoring.service.impl.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Hello world!
- *
- */
-public class App 
+public class App
 {
     public static void main( String[] args ) throws FunctionnalException {
-        // create movies
+        // create movies test
         IMovie m1 = new Movie("M1", MovieType.REGULAR);
         IMovie m2 = new Movie("M2",MovieType.NEW_RELEASE);
         IMovie m3 = new Movie("M3",MovieType.NEW_RELEASE);
