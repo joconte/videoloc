@@ -19,7 +19,7 @@ public class PrinterHtml extends Printer{
      * Print in HTML format all the customer rentals, the amount owed by the customer and his frequent renter points.
      */
     @Override
-    public void printCustomerRental(ICustomerRental customerRental) throws FunctionnalException {
+    public String printCustomerRental(ICustomerRental customerRental) throws FunctionnalException {
         StringBuilder stringBuilder = new StringBuilder();
         List<IRental> rentals = customerRental.getRentals();
         ICustomer customer = customerRental.getCustomer();
@@ -84,7 +84,11 @@ public class PrinterHtml extends Printer{
         stringBuilder.append("\n");
 
         stringBuilder.append(htmlLastBalise);
-        logger.info(stringBuilder.toString());
+
+        String toLog = stringBuilder.toString();
+        logger.info(toLog);
+
+        return toLog;
     }
 
     public PrinterHtml() {}

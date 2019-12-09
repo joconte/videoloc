@@ -26,8 +26,8 @@ public class CustomerRentalService implements ICustomerRentalService {
     }
 
     @Override
-    public void printCustomerRentalInformations(ICustomerRental customerRental) throws FunctionnalException {
-        this.printer.printCustomerRental(customerRental);
+    public String printCustomerRentalInformations(ICustomerRental customerRental) throws FunctionnalException {
+        return this.printer.printCustomerRental(customerRental);
     }
 
     public void setPrinter(IPrinter printer) {

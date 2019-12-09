@@ -24,8 +24,8 @@ public abstract class Printer implements IPrinter {
     }
 
     @Override
-    public void printCustomerRental(ICustomerRental customerRental) throws FunctionnalException {
-
+    public String printCustomerRental(ICustomerRental customerRental) throws FunctionnalException {
+        return "";
     }
 
     @Override

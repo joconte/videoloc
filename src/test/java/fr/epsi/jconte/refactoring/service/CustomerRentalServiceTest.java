@@ -15,6 +15,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
+import static org.junit.Assert.assertEquals;
+
 public class CustomerRentalServiceTest {
 
     private static CreateTestDataHelper createTestDataHelper;
@@ -47,15 +49,15 @@ public class CustomerRentalServiceTest {
         // Arrange
         ICustomerRentalService customerRentalService = new CustomerRentalService(calculatorRentalCost, calculatorAmountOwed, calculatorFrequentRenterPoint, printer);
         ICustomerRental customerRental = createTestDataHelper.createCustomerRental();
+        String expected = "test";
 
         // Mock
-        Mockito.doNothing().when(printer).printCustomerRental(Mockito.any(ICustomerRental.class));
+        Mockito.when(printer.printCustomerRental(Mockito.any(ICustomerRental.class))).thenReturn(expected);
 
         // Act
-        customerRentalService.printCustomerRentalInformations(customerRental);
-    }
+        String log = customerRentalService.printCustomerRentalInformations(customerRental);
 
-    @Test
-    public void setPrinter() {
+        // Assert
+        assertEquals(expected, log);
     }
 }

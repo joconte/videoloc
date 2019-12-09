@@ -8,7 +8,7 @@ import fr.epsi.jconte.refactoring.model.ICustomerRental;
 
 public interface IPrinter {
 
-    void printCustomerRental(ICustomerRental customerRental) throws FunctionnalException;
+    String printCustomerRental(ICustomerRental customerRental) throws FunctionnalException;
 
     void setCalculatorAmoutOwed(ICalculatorAmountOwed calculatorAmoutOwed);
 

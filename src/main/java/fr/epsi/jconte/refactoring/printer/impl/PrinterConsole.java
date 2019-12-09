@@ -21,7 +21,7 @@ public class PrinterConsole extends Printer{
      * Print in the console all the customer rentals, the total amount owed by the customer and his frequent renter points.
      */
     @Override
-    public void printCustomerRental(ICustomerRental customerRental) throws FunctionnalException {
+    public String printCustomerRental(ICustomerRental customerRental) throws FunctionnalException {
         StringBuilder stringBuilder = new StringBuilder();
         List<IRental> rentals = customerRental.getRentals();
         ICustomer customer = customerRental.getCustomer();
@@ -51,7 +51,10 @@ public class PrinterConsole extends Printer{
         stringBuilder.append(calculatorFrequentRenterPoint.getFrequentRenterPoint(customerRental));
         stringBuilder.append(" frequent renter points ");
 
-        logger.info(stringBuilder.toString());
+        String toLog = stringBuilder.toString();
+        logger.info(toLog);
+
+        return toLog;
     }
 
     public PrinterConsole() {}

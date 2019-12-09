@@ -5,7 +5,7 @@ import fr.epsi.jconte.refactoring.model.ICustomerRental;
 import fr.epsi.jconte.refactoring.printer.IPrinter;
 
 public interface ICustomerRentalService {
-    void printCustomerRentalInformations(ICustomerRental customerRental) throws FunctionnalException;
+    String printCustomerRentalInformations(ICustomerRental customerRental) throws FunctionnalException;
 
     void setPrinter(IPrinter printer);
 }
