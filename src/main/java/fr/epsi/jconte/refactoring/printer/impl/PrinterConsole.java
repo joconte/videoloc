@@ -7,6 +7,7 @@ import fr.epsi.jconte.refactoring.exception.FunctionnalException;
 import fr.epsi.jconte.refactoring.model.ICustomer;
 import fr.epsi.jconte.refactoring.model.ICustomerRental;
 import fr.epsi.jconte.refactoring.model.IRental;
+import org.apache.log4j.Logger;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ import java.util.List;
  */
 public class PrinterConsole extends Printer{
 
+    private Logger logger = Logger.getLogger(PrinterConsole.class);
     /**
      * Print in the console all the customer rentals, the total amount owed by the customer and his frequent renter points.
      */
@@ -24,6 +26,7 @@ public class PrinterConsole extends Printer{
         List<IRental> rentals = customerRental.getRentals();
         ICustomer customer = customerRental.getCustomer();
 
+        stringBuilder.append("\n");
         stringBuilder.append("Rental Record for ");
         stringBuilder.append(customer.getName());
         stringBuilder.append("\n");
@@ -48,7 +51,7 @@ public class PrinterConsole extends Printer{
         stringBuilder.append(calculatorFrequentRenterPoint.getFrequentRenterPoint(customerRental));
         stringBuilder.append(" frequent renter points ");
 
-        System.out.println(stringBuilder.toString());
+        logger.info(stringBuilder.toString());
     }
 
     public PrinterConsole() {}

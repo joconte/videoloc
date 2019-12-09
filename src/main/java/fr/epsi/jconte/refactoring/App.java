@@ -8,8 +8,9 @@ import fr.epsi.jconte.refactoring.model.impl.*;
 import fr.epsi.jconte.refactoring.printer.IPrinter;
 import fr.epsi.jconte.refactoring.printer.impl.PrinterConsole;
 import fr.epsi.jconte.refactoring.printer.impl.PrinterHtml;
-import fr.epsi.jconte.refactoring.service.*;
-import fr.epsi.jconte.refactoring.service.impl.*;
+import fr.epsi.jconte.refactoring.service.ICustomerRentalService;
+import fr.epsi.jconte.refactoring.service.impl.CustomerRentalService;
+import org.apache.log4j.BasicConfigurator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,10 @@ import java.util.List;
 public class App
 {
     public static void main( String[] args ) throws FunctionnalException {
+
+        // Config logger
+        BasicConfigurator.configure();
+
         // create movies test
         IMovie m1 = new Movie("M1", MovieType.REGULAR);
         IMovie m2 = new Movie("M2",MovieType.NEW_RELEASE);
