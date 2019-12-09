@@ -9,11 +9,11 @@ The topic is about :
 
 # Continuous Integration
 
-Travis CI : https://travis-ci.org/joconte/refactoring
+Travis CI : https://travis-ci.org/joconte/videoloc
 
 # Continuous Inpection 
 
-SonarQube : https://sonarcloud.io/dashboard?id=fr.epsi.jconte%3Arefactoring
+SonarQube : https://sonarcloud.io/dashboard?id=fr.epsi.jconte.refactoring%3Avideoloc
 
 # Contribution
 
