@@ -13,7 +13,7 @@ Travis CI : https://travis-ci.org/joconte/refactoring
 
 # Continuous Inpection 
 
-SonarQube : https://sonarcloud.io/dashboard?id=fr.epsi.jconte%3Arefactoring
+SonarQube : https://sonarcloud.io/dashboard?id=fr.epsi.jconte.refactoring%3Avideoloc
 
 # Contribution
 
