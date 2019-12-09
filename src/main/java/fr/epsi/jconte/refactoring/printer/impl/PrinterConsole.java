@@ -15,13 +15,12 @@ import java.util.List;
  */
 public class PrinterConsole extends Printer{
 
-    private StringBuilder stringBuilder;
     /**
      * Print in the console all the customer rentals, the total amount owed by the customer and his frequent renter points.
      */
     @Override
     public void printCustomerRental(ICustomerRental customerRental) throws FunctionnalException {
-        stringBuilder = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
         List<IRental> rentals = customerRental.getRentals();
         ICustomer customer = customerRental.getCustomer();
 

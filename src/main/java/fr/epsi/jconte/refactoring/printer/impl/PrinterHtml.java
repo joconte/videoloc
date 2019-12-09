@@ -13,13 +13,12 @@ import java.util.List;
  */
 public class PrinterHtml extends Printer{
 
-    private StringBuilder stringBuilder;
     /**
      * Print in HTML format all the customer rentals, the amount owed by the customer and his frequent renter points.
      */
     @Override
     public void printCustomerRental(ICustomerRental customerRental) throws FunctionnalException {
-        stringBuilder = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
         List<IRental> rentals = customerRental.getRentals();
         ICustomer customer = customerRental.getCustomer();
         String htmlFirstBalise = "<html>";

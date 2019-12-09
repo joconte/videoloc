@@ -45,7 +45,7 @@ public class CalculatorAmountOwedNoReducTest {
         double result = calculatorAmountOwed.getAmountOwed(customerRental);
 
         // Assert
-        Assert.assertEquals(result, 10, 0.0);
+        Assert.assertEquals(10, result, 0.0);
 
     }
 }
