@@ -7,13 +7,13 @@ import fr.epsi.jconte.refactoring.model.ICustomer;
  */
 public class Customer implements ICustomer {
 
-    private java.lang.String name;
+    private String name;
 
     public Customer(String name) {
-        name = name;
+        this.name = name;
     }
 
-    public java.lang.String getName() {
-        return name;
+    public String getName() {
+        return this.name;
     }
 }
