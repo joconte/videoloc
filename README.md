@@ -9,7 +9,7 @@ The topic is about :
 
 # Continuous Integration
 
-Travis CI : https://travis-ci.org/joconte/refactoring
+Travis CI : https://travis-ci.org/joconte/videoloc
 
 # Continuous Inpection 
 
