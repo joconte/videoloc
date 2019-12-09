@@ -9,8 +9,7 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>videoloc</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>http://www.contejonathan.net</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,7 +21,6 @@
       <java.version>1.8</java.version>
       <sonar.host.url>https://localhost:9000</sonar.host.url>
       <sonar.login>def28065df87d779f31947d78c13240b9ccb7d58</sonar.login>
-      <!--<sonar.password>admin</sonar.password>-->
       <sonar.jacoco.reportPath>target/jacoco.exec</sonar.jacoco.reportPath>
       <sonar.binaries>target/classes</sonar.binaries>
       <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>

@@ -13,11 +13,13 @@ import java.util.List;
  */
 public class PrinterHtml extends Printer{
 
+    private StringBuilder stringBuilder;
     /**
      * Print in HTML format all the customer rentals, the amount owed by the customer and his frequent renter points.
      */
     @Override
     public void printCustomerRental(ICustomerRental customerRental) throws FunctionnalException {
+        stringBuilder = new StringBuilder();
         List<IRental> rentals = customerRental.getRentals();
         ICustomer customer = customerRental.getCustomer();
         String htmlFirstBalise = "<html>";
@@ -27,37 +29,44 @@ public class PrinterHtml extends Printer{
         String headFirstBalise = "<head>";
         String headLastBalise = "</head>";
 
-        String result = "";
-
-        result += htmlFirstBalise + "\n";
-
-        result += headFirstBalise + headLastBalise + "\n";
-
-        result += bodyFirstBalise + "\n";
-
-        result += " Rental Record for " + customer.getName() + "\n";
+        stringBuilder.append(htmlFirstBalise);
+        stringBuilder.append("\n");
+        stringBuilder.append(headFirstBalise);
+        stringBuilder.append(headLastBalise);
+        stringBuilder.append("\n");
+        stringBuilder.append(bodyFirstBalise);
+        stringBuilder.append("\n");
+        stringBuilder.append(" Rental record for ");
+        stringBuilder.append(customer.getName());
+        stringBuilder.append("\n");
 
         for (IRental rental : rentals) {
             double thisAmount = calculatorRentalCost.calculateRentalCost(rental);
 
             // show figures for this rental
-            result += "\t" + rental.getMovie().getTitle()
-                    + "\t" + String.valueOf(thisAmount) + "\n";
+            stringBuilder.append("\t");
+            stringBuilder.append(rental.getMovie().getTitle());
+            stringBuilder.append("\t");
+            stringBuilder.append(thisAmount);
+            stringBuilder.append("\n");
+
         }
 
-// add footer lines
-        result += "Amount owed is "
-                + String.valueOf(calculatorAmountOwed.getAmountOwed(customerRental))
-                + "\n";
+        // add footer lines
+        stringBuilder.append("Amount owed is ");
+        stringBuilder.append(calculatorAmountOwed.getAmountOwed(customerRental));
+        stringBuilder.append("\n");
 
-        result += "You earned "
-                + String.valueOf(calculatorFrequentRenterPoint.getFrequentRenterPoint(customerRental))
-                + " frequent renter points " + "\n";
+        stringBuilder.append("You earned ");
+        stringBuilder.append(calculatorFrequentRenterPoint.getFrequentRenterPoint(customerRental));
+        stringBuilder.append(" frequent renter points ");
+        stringBuilder.append("\n");
 
-        result += bodyLastBalise + "\n";
+        stringBuilder.append(bodyLastBalise);
+        stringBuilder.append("\n");
 
-        result += htmlLastBalise;
-        System.out.println(result);
+        stringBuilder.append(htmlLastBalise);
+        System.out.println(stringBuilder.toString());
     }
 
     public PrinterHtml() {}

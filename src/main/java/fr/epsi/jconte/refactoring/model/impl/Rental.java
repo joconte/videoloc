@@ -8,21 +8,21 @@ import fr.epsi.jconte.refactoring.model.IRental;
  */
 public class Rental implements IRental {
 
-    private int _daysRented;
+    private int daysRented;
 
-    private IMovie _movie;
+    private IMovie movie;
 
     public Rental(IMovie movie, int daysRented) {
-        _movie = movie;
-        _daysRented = daysRented;
+        movie = movie;
+        daysRented = daysRented;
     }
 
     public int getDaysRented() {
-        return _daysRented;
+        return daysRented;
     }
 
     public IMovie getMovie() {
-        return _movie;
+        return movie;
     }
 }
 

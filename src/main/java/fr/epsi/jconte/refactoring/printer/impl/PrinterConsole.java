@@ -15,32 +15,41 @@ import java.util.List;
  */
 public class PrinterConsole extends Printer{
 
+    private StringBuilder stringBuilder;
     /**
      * Print in the console all the customer rentals, the total amount owed by the customer and his frequent renter points.
      */
     @Override
     public void printCustomerRental(ICustomerRental customerRental) throws FunctionnalException {
+        stringBuilder = new StringBuilder();
         List<IRental> rentals = customerRental.getRentals();
         ICustomer customer = customerRental.getCustomer();
-        String result = "Rental Record for " + customer.getName() + "\n";
+
+        stringBuilder.append("Rental Record for ");
+        stringBuilder.append(customer.getName());
+        stringBuilder.append("\n");
 
         for (IRental rental : rentals) {
             double thisAmount = calculatorRentalCost.calculateRentalCost(rental);
 
             // show figures for this rental
-            result += "\t" + rental.getMovie().getTitle()
-                    + "\t" + String.valueOf(thisAmount) + "\n";
+            stringBuilder.append("\t");
+            stringBuilder.append(rental.getMovie().getTitle());
+            stringBuilder.append("\t");
+            stringBuilder.append(thisAmount);
+            stringBuilder.append("\n");
         }
 
-// add footer lines
-        result += "Amount owed is "
-                + String.valueOf(calculatorAmountOwed.getAmountOwed(customerRental))
-                + "\n";
+        // add footer lines
+        stringBuilder.append("Amount owed is ");
+        stringBuilder.append(calculatorAmountOwed.getAmountOwed(customerRental));
+        stringBuilder.append("\n");
 
-        result += "You earned "
-                + String.valueOf(calculatorFrequentRenterPoint.getFrequentRenterPoint(customerRental))
-                + " frequent renter points ";
-        System.out.println(result);
+        stringBuilder.append("You earned ");
+        stringBuilder.append(calculatorFrequentRenterPoint.getFrequentRenterPoint(customerRental));
+        stringBuilder.append(" frequent renter points ");
+
+        System.out.println(stringBuilder.toString());
     }
 
     public PrinterConsole() {}
